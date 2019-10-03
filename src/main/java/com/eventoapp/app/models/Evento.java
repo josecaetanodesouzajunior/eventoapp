@@ -21,7 +21,7 @@ public class Evento implements Serializable {
 	private String data;
 	private String horario;
 	
-	
+	 
 	public String getNome() {
 		return nome;
 	}

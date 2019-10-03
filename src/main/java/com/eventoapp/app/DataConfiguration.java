@@ -19,7 +19,7 @@ public class DataConfiguration {
         dataSource.setUrl("jdbc:mysql://localhost:3306/eventosapp");
         dataSource.setUsername("root");
         dataSource.setPassword("1234");
-        return dataSource;
+        return dataSource; 
     }
 	
 	@Bean

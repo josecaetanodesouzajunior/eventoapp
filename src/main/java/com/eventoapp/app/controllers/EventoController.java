@@ -11,21 +11,21 @@ import com.eventoapp.app.repository.EventoRepository;
 
 @Controller
 public class EventoController {
-
+	
 	@Autowired
 	private EventoRepository eventoRepository;
-
-	@RequestMapping(value = "/cadastrarEvento", method = RequestMethod.GET)
+	
+	@RequestMapping(value="/cadastrarEvento", method = RequestMethod.GET)
 	public String form() {
 		return "evento/formEvento";
 	}
-
-	@RequestMapping(value = "/cadastrarEvento", method = RequestMethod.POST)
+	 
+	@RequestMapping(value="/cadastrarEvento", method = RequestMethod.POST)
 	public String form(Evento evento) {
 		eventoRepository.save(evento);
 		return "redirect:/cadastrarEvento";
 	}
-
+	
 	@RequestMapping("/eventos")
 	public ModelAndView listaEventos() {
 		ModelAndView mv = new ModelAndView("index");
@@ -33,5 +33,6 @@ public class EventoController {
 		mv.addObject("eventos", eventos);
 		return mv;
 	}
+	
 
 }
